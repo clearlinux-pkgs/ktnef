@@ -6,7 +6,7 @@
 #
 Name     : ktnef
 Version  : 21.08.2
-Release  : 32
+Release  : 33
 URL      : https://download.kde.org/stable/release-service/21.08.2/src/ktnef-21.08.2.tar.xz
 Source0  : https://download.kde.org/stable/release-service/21.08.2/src/ktnef-21.08.2.tar.xz
 Source1  : https://download.kde.org/stable/release-service/21.08.2/src/ktnef-21.08.2.tar.xz.sig
