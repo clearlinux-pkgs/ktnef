@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : ktnef
-Version  : 22.04.2
-Release  : 41
-URL      : https://download.kde.org/stable/release-service/22.04.2/src/ktnef-22.04.2.tar.xz
-Source0  : https://download.kde.org/stable/release-service/22.04.2/src/ktnef-22.04.2.tar.xz
-Source1  : https://download.kde.org/stable/release-service/22.04.2/src/ktnef-22.04.2.tar.xz.sig
+Version  : 22.04.3
+Release  : 42
+URL      : https://download.kde.org/stable/release-service/22.04.3/src/ktnef-22.04.3.tar.xz
+Source0  : https://download.kde.org/stable/release-service/22.04.3/src/ktnef-22.04.3.tar.xz
+Source1  : https://download.kde.org/stable/release-service/22.04.3/src/ktnef-22.04.3.tar.xz.sig
 Summary  : API for handling TNEF data
 Group    : Development/Tools
 License  : BSD-3-Clause CC0-1.0 LGPL-2.0
@@ -75,15 +75,15 @@ locales components for the ktnef package.
 
 
 %prep
-%setup -q -n ktnef-22.04.2
-cd %{_builddir}/ktnef-22.04.2
+%setup -q -n ktnef-22.04.3
+cd %{_builddir}/ktnef-22.04.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1654870777
+export SOURCE_DATE_EPOCH=1657588044
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -99,14 +99,14 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1654870777
+export SOURCE_DATE_EPOCH=1657588044
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ktnef
-cp %{_builddir}/ktnef-22.04.2/CMakePresets.json.license %{buildroot}/usr/share/package-licenses/ktnef/c085897bc39e05746ffd2d889a6e84ff1b7ae2d9
-cp %{_builddir}/ktnef-22.04.2/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/ktnef/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
-cp %{_builddir}/ktnef-22.04.2/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/ktnef/8287b608d3fa40ef401339fd907ca1260c964123
-cp %{_builddir}/ktnef-22.04.2/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/ktnef/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/ktnef-22.04.2/metainfo.yaml.license %{buildroot}/usr/share/package-licenses/ktnef/7ff5a7dd2c915b2b34329c892e06917c5f82f3a4
+cp %{_builddir}/ktnef-22.04.3/CMakePresets.json.license %{buildroot}/usr/share/package-licenses/ktnef/c085897bc39e05746ffd2d889a6e84ff1b7ae2d9
+cp %{_builddir}/ktnef-22.04.3/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/ktnef/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
+cp %{_builddir}/ktnef-22.04.3/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/ktnef/8287b608d3fa40ef401339fd907ca1260c964123
+cp %{_builddir}/ktnef-22.04.3/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/ktnef/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/ktnef-22.04.3/metainfo.yaml.license %{buildroot}/usr/share/package-licenses/ktnef/7ff5a7dd2c915b2b34329c892e06917c5f82f3a4
 pushd clr-build
 %make_install
 popd
@@ -150,7 +150,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Tnef.so.5
-/usr/lib64/libKF5Tnef.so.5.20.2
+/usr/lib64/libKF5Tnef.so.5.20.3
 
 %files license
 %defattr(0644,root,root,0755)
