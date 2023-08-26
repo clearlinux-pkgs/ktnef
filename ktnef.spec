@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : ktnef
-Version  : 23.04.3
-Release  : 56
-URL      : https://download.kde.org/stable/release-service/23.04.3/src/ktnef-23.04.3.tar.xz
-Source0  : https://download.kde.org/stable/release-service/23.04.3/src/ktnef-23.04.3.tar.xz
-Source1  : https://download.kde.org/stable/release-service/23.04.3/src/ktnef-23.04.3.tar.xz.sig
+Version  : 23.08.0
+Release  : 57
+URL      : https://download.kde.org/stable/release-service/23.08.0/src/ktnef-23.08.0.tar.xz
+Source0  : https://download.kde.org/stable/release-service/23.08.0/src/ktnef-23.08.0.tar.xz
+Source1  : https://download.kde.org/stable/release-service/23.08.0/src/ktnef-23.08.0.tar.xz.sig
 Summary  : API for handling TNEF data
 Group    : Development/Tools
 License  : BSD-3-Clause CC0-1.0 LGPL-2.0
@@ -78,15 +78,15 @@ locales components for the ktnef package.
 
 
 %prep
-%setup -q -n ktnef-23.04.3
-cd %{_builddir}/ktnef-23.04.3
+%setup -q -n ktnef-23.08.0
+cd %{_builddir}/ktnef-23.08.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1688882494
+export SOURCE_DATE_EPOCH=1693075379
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -119,7 +119,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1688882494
+export SOURCE_DATE_EPOCH=1693075379
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ktnef
 cp %{_builddir}/ktnef-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/ktnef/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c || :
@@ -163,10 +163,6 @@ popd
 /usr/include/KPim5/KTNEF/ktnef/ktnefpropertyset.h
 /usr/include/KPim5/KTNEF/ktnef/ktnefwriter.h
 /usr/include/KPim5/KTNEF/ktnef_version.h
-/usr/lib64/cmake/KF5Tnef/KF5TnefConfig.cmake
-/usr/lib64/cmake/KF5Tnef/KF5TnefConfigVersion.cmake
-/usr/lib64/cmake/KF5Tnef/KPim5TnefTargets-relwithdebinfo.cmake
-/usr/lib64/cmake/KF5Tnef/KPim5TnefTargets.cmake
 /usr/lib64/cmake/KPim5Tnef/KPim5TnefConfig.cmake
 /usr/lib64/cmake/KPim5Tnef/KPim5TnefConfigVersion.cmake
 /usr/lib64/cmake/KPim5Tnef/KPim5TnefTargets-relwithdebinfo.cmake
@@ -176,9 +172,9 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libKPim5Tnef.so.5.23.3
+/V3/usr/lib64/libKPim5Tnef.so.5.24.0
 /usr/lib64/libKPim5Tnef.so.5
-/usr/lib64/libKPim5Tnef.so.5.23.3
+/usr/lib64/libKPim5Tnef.so.5.24.0
 
 %files license
 %defattr(0644,root,root,0755)
